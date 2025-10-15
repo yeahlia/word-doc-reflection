@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Doc Synth – Milestone Report</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- toolbar -->
+    <div class="toolbar">
+      <div class="title-group">
+        <div class="title">Word Doc Synth – Reflection</div>
+      </div>
+
+      <div class="controls">
+        <!-- font size -->
+        <div class="control-group">
+          <button class="tool-btn">-</button>
+          <span class="font-size-display">12</span>
+          <button class="tool-btn">+</button>
+        </div>
+
+        <!-- bold / italic / underline -->
+        <div class="control-group">
+          <button class="tool-btn toggle"><b>B</b></button>
+          <button class="tool-btn toggle"><i>I</i></button>
+          <button class="tool-btn toggle"><u>U</u></button>
+        </div>
+
+        <!-- colors -->
+        <div class="control-group">
+          <button class="color-btn black"></button>
+          <button class="color-btn blue"></button>
+          <button class="color-btn green"></button>
+          <button class="color-btn red"></button>
+        </div>
+
+        <!-- reset -->
+        <div class="control-group">
+          <button class="tool-btn reset">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- doc container -->
+    <div class="doc-container">
+      <div class="page">
+        <h1>Reflection</h1>
+        <h2>Concept and Overview</h2>
+        <p>
+          Word Doc Synth reimagines a familiar word processor interface into a
+          playable instrument. I respond to the "All Text Characters" prompy by
+          how the project treats typing as a way to compose, with letters
+          triggering notes, words form chords and formatting modifying the sound
+          that plays. The website was created on HTML, CSS and JavaScript, with
+          the Tone.js library, with the Math.random() technique being used to
+          create random frequencies through the "?" modifier.
+        </p>
+
+        <h2>Values</h2>
+        <p>
+          The value of playfulness shaped the starting inspiration behind Word
+          Doc Synth. I wanted to transform a mundane, everyday task into
+          something experimental and enjoyable. The interface keeps the
+          structure of a word processor, but gives the users freedom to explore
+          sound through writing. Each character becomes both a linguistic and
+          musical, which allows for discovery while still grounded in rules of
+          syntax, a perfect balance between structure and freedom.
+          <br /><br />
+          In order to create immersion, I focused on familiarity. By drawing
+          from the early 2000's Microsoft Word interface, I was able to use
+          nostalgia as a tool so that users could focus on exploring the new
+          sound functionality, rather than trying to completely decipher an
+          unfamiliar layout. The cohesive sound design reinforces attention and
+          transforms a routine task, into a creative act. Immersion in this
+          project doesn't rely on the senses, but rather on the focused
+          engagement that occurs when users can lose themselves while typing.
+          <br /><br />
+          Finally, I also used the value of expressivity to guide both the
+          aesthetic and functional aspects of the design. The addition of
+          formatting-based sound modifiers allowed users to control distortion,
+          vibrato, reverb and dynamics, encouraging personal style an
+          experimentation. In this sense, Word Doc Synth supports the principles
+          of expressive interaction design, where it allows adjustment and
+          craftsman ship to emerge through use.
+        </p>
+
+        <h2>Design Rationale</h2>
+        <p>
+          In terms of feedback, I was aiming to have a clear tie between the
+          sound and text. Each letter produces a predetermined sound response,
+          creating a clear and responsive connection between input and output.
+          At the same time, the changes in text formatting (bold, italic and
+          underline), provides visual feedback and hints a change in audio. For
+          example, when users change a text to become bold, they notice that
+          they also hear distortion applied to the sound alongside the bold
+          text. This link between sight and sound reinforces that relationship
+          between action and outcome which helps users intuitively understand
+          that the visuals affect the audio. The sound itself acts as the
+          primary feedback, while the formatting provides a visual cue that
+          something has also changed audio wise.
+          <br /><br />
+          For information design, I kept the familiar layout of early Microsoft
+          Word. The toolbar, buttons and text area are instantly recognizable,
+          which helps reduce cognitive load and allowing the users to focus on
+          exploring the website's sound behavior. The Help button and onboarding
+          tutorial support this by explaining the key functions and behaviors in
+          a guided and accessible format. I kept careful spacing and alignment
+          to keep the interface readable and cohesive, while still keeping that
+          early 2000's aesthetic.
+          <br /><br />
+          The mapping between user actions and sounds is designed to feel
+          logical. Letters correspond to notes, words to chords, and punctuation
+          and formatting change how the sound can be heard. These mirror the
+          roles that characters play when writing. This mapping makes even
+          randomized or abstract behavior feel coherent to each other within the
+          frame work of text equals sound. Since the letter to notes are kept
+          consistent, its easy to grasp and understand how to build complex
+          rhythms or melodies.
+          <br /><br />
+          Learnability became a core focus when improving on my prototype.
+          Feedback and testing revealed that users initially struggled to figure
+          out how the website worked. The creation of the onboarding tutorial
+          now introduces functions progressively to help guide the user into the
+          key functions, while still leaving room for explorability. There is
+          also the optional help section in case users didn't want to spend too
+          much effort exploring what everything does, and wants to go straight
+          into making sounds. It is kept as a concise list to ensure that it is
+          legible and easy to scan for specific information. Together, it
+          encourages creativity and experimentation while still maintaining
+          clarity.
+        </p>
+
+        <h2>Improvements and Refinements</h2>
+        <p>
+          Since the prototype, Word Doc Synth underwent several major
+          refinements that focused on usability, clarity and sounds. The most
+          significant addition was to the learnability of the program,
+          specifically the onboarding tutorial, which was made alongside the
+          original Help button. The new tutorial appears automatically on first
+          load, and guides users step-by-step through the typing and sound
+          rules. This improvement directly addressed the feedback from user
+          testing, where many users struggled to understand how to produce sound
+          without prior instruction. I also made sure to make a 'spotlight' on
+          the certain areas that the tutorial was targeting, so it was easier to
+          follow! By structuring the tutorial as an introduction (that is also
+          skippable), I was able to make the experience more welcoming without
+          having returning customers constantly having to do the same tutorial.
+          I also cut down the amount of punctuation modifiers there were in
+          order to make the content easier to digest.
+          <br /><br />
+          Another major change was the implementation of actually functioning
+          formatting controls. The prototype included non-functional buttons for
+          visual cohesion, but seemed to confuse the users testing my prototype.
+          The final version activates these features so that text styling now
+          directly affects sound behavior. Bold adds distortion, italics
+          introduce vibrato and underline applies reverb. I also added the
+          ability to change the colors which changed the sound wave being
+          produced by the synth. I originally had coded that the color changed
+          what instrument it was playing, but I felt that the instruments didn't
+          match the aesthetic. When I think of early 2000's computers, I think
+          harsh sound waves and frequencies, so I wanted to replicate that my
+          keeping it as a synth. Since triangle and sine wave sound really
+          similar, I decided not to a triangle wave. The last thing on the
+          toolbar was the font, and I made it so that the bigger the font is,
+          the louder the sound. This was the most simple idea, since the text
+          physically got bigger, and so did the sound. I added a limit to how
+          large and how small the size could go to ensure that the code doesn't
+          break and the website can't play any audio that potentially can harm
+          eardrums. I made some specific adjustments, like adding gain to add
+          more of a difference, and it is all written down in the code comments!
+          But overall, it was made to have more variety between sounds that
+          sounded too similar. This update expanded the expressive potential of
+          the interface, but also created a visual to audio connection, where
+          users can see that a change has occurred and hear its corresponding
+          effect in a manner that makes sense. I also made sure that the reset
+          button worked, which basically clears the page and the attributes!
+          <br />
+          <br />
+          I also many a lot of sound design refinements. During testing, a lot
+          of people noted that some pitches were overly harsh. In response to
+          this, I restricted the playable frequency range, and adjusted the
+          envelope and sustain times to produce smoother, more cohesive tones.
+          The hardest part to solve were the chords/words though. I realized
+          that even though I wanted to keep a consistent letter to note
+          conversion, people will of course write down words that exist, and
+          they could sound overly harsh, dissonant and didn't really feel
+          musical. I tried multiple solutions, the first one being that after
+          typing a note, chords would bend towards the nearest frequency in the
+          pentatonic scale. In theory, this meant that dissonant notes would
+          correct itself towards safer tones, but it removed the element of
+          experimentation and unpredictability as everything felt the same.
+          Similar to that, I tried to make it so that it snapped to the nearest
+          major or minor scale (based on whether the word had an odd or even
+          amount of letters) so that it would still be harmonic, but with more
+          variety. But, I ran into the same issues of the sound feeling too
+          static and didn't really have much identity. So I came up with the
+          solution I have now! The code scans the first letter of the word and
+          gets the note from the predetermined table. It then takes that note
+          and decide whether its going to be major or minor based on whether it
+          has an even word length or odd. It then uses Math.random() to randomly
+          choose from the triad within the same octave so that every chord is
+          guaranteed to be in harmony. However this meant that words starting
+          with Z for example, were way too high and harsh, so I implemented some
+          code that made it so that any word starting with the letter A-M would
+          stay in its octave, while letters N-z would create triads with one
+          octave lower. This made everything sound better, especially when
+          writing sentences in the higher register.
+          <br />
+          <br />
+          There were some issues that arose from all these changes concerning
+          the paragraphs, and multiple paragraphs wouldn't play at the same
+          time. This needed to be fixed because it meant that looping and live
+          typing mode wouldn't be able to be played together, which is one of
+          the most fun features of the code. This was fixed with the help of AI
+          for debugging and solutions, as I couldn't even figure out why it was
+          happening. The solution also suggested to change from an activeloop
+          array, into a Map() structure, since the original version would break
+          if content was added or deleted, and was difficult to clean up loops,
+          which led to the breaking of the paragraphs. The Map() structure can
+          specifically avoid collisions and also a more efficient cleanup.
+          <br />
+          <br />
+          Other than that, I tried to make my code more efficient with the help
+          of AI. There were certain functions that felt confusing and too long,
+          so I was able to ask what I could change to make it better and more
+          efficient. With that information I did a mix of researching and
+          debugging and AI help to create more efficient code and even resulted
+          in fixing issues that I didn't realize existed! For example, I had a
+          function that walked through every node in the page, collected the
+          text and their attributes and then returned an array, which I then had
+          to loop through again. In my updated version, I combined these steps
+          into one giant recursive function that collects each character and
+          formatting directly. This mad ethe code cleaner and faster since it no
+          longer needed multiple loops. Another example would be replacing my
+          activeLoops object with Map(), which made my loop management much more
+          stable. Originally it was restoring loops by index, so if a user
+          changed the content, it would cause loops to trigger incorrectly. Now,
+          it allows me to reference each element as a key and made it easier to
+          clean up and stop loops, especially when things were deleted or
+          rearranged. The last thing I changed was rewriting how sound was
+          triggered. Originally, I had one huge function that handled everything
+          with sound, including connecting oscillators to effects, triggering
+          notes and cleaning them up. It worked but it was hard to read and
+          tweak. So in the final version I was able to rewrite them into
+          different functions and separate the logic into clearer steps. It made
+          the code more modular and gave me a much more consistent sound, since
+          the prototype would break sometimes and I had no idea what was causing
+          it.
+        </p>
+
+        <h2>Timeline and Process</h2>
+        <p>
+          The development of Word Doc Synth was shaped through a cycle of
+          experimentation, testing and refinement. Early on, I focused on
+          getting the foundations working, ensuring that the letters, words and
+          punctuation could reliable trigger the correct sound. This part of the
+          project was straightforward, but as the project grew in complexity,
+          the time I spent shifted towards more debugging and optimization
+          rather than just building new features.
+          <br />
+          <br />
+          Many of the major changes and refinements such as the onboarding
+          tutorial, formatting controls, etc. are discussed in the improvements
+          section. Much of the time used when creating these improvements were
+          spent identifying what users struggled with during testing, then
+          learning new technical solutions to address those issues, For example,
+          debugging problems like overlapping loops and having to restructure my
+          code taught me the importance of clean data management and creating
+          modular systems instead of just one big function.
+          <br />
+          <br />
+          There were moments where I had to completely re-evaluate my approach,
+          especially around the chord/word logic. I spent longer than planned
+          trying to make those dissonant chords sound musical, while still
+          keeping that unpredictability and exploration that makes the Word Doc
+          Synth exciting in the first place. It took way more time than expected
+          and surprised me that refining behavior and making tweaks can often be
+          much more time consuming than creating the initial build.
+          <br />
+          <br />
+          Towards the final weeks, I shifted focus towards refinement and
+          polishing, by simplifying punctuation rules, balancing the different
+          sound levels manually and cleaning up the overall structure of the
+          code. I learnt to leave room in my timeline for unexpected technical
+          hurdles, as even minor changes in my code had effects across the
+          entire system. Because of this, I wasn't able to do a feature that I
+          was planning on, which was the visual pulsing/glowing when a letter or
+          word was being played. It was meant to improve clarity when something
+          was playing, which would have been nice to have, but I spent more time
+          than planned on debugging and the other features.
+          <br />
+          <br />
+          Overall, this project taught me a lot about scoping and iterative
+          development (as well as debugging code!). I have become more aware of
+          how to balance my ambition to create something complex, with practical
+          deliverables. I realize how much planning and testing has to go into
+          making an interface feel simple and intuitive. Even though a few
+          challenges slowed my progress, they were able to help me deepen my
+          understanding of what is required to bring a design into a stable
+          deliverable!
+        </p>
+
+        <h2>Challenges and Achievements</h2>
+        <p>
+          The aspect that I am most proud of is the successful implementation of
+          the formatting! It transformed the visual feature into a meaningful
+          and interactive aspect, and connects typography directly to audio
+          behavior, Without it, I feel like the interface and visual design of
+          the project would be lacking, as a key component to word processors is
+          formatting the text! It was the feature that most clearly showed my
+          project goals, transforming a familiar task into something playful,
+          unique and interesting. Seeing this feature work seamlessly and i the
+          way I intended it to feels very rewarding!
+          <br />
+          <br />
+          The most challenging aspect for me was making existing code more
+          efficient and modular as the project expanded. Early versions of the
+          website relied on long functions that became hard to maintain and read
+          through and debug. Transforming these sections to run recursively and
+          independently of each other took a lot of time and it felt like I was
+          starting on a blank canvas, which was very frustrating. It felt like I
+          was moving backwards, I was rewriting code that technically worked
+          instead of adding new features, but in the long term, I knew it was
+          needed to remove bugs, make the program more stable and adaptable.
+          This also makes it easier for me in the future if I were ever to add
+          more features.
+          <br />
+          <br />
+          This process taught me the value of writing clean and flexible code
+          early on, and giving myself enough time for it. Efficiency isn't just
+          about performance, but also the ability to keep on improving the code
+          without breaking what already works.
+        </p>
+
+        <h2>Conclusion</h2>
+        <p>
+          Word Doc Synth has been a project that pushed me to combine conceptual
+          design thinking with technical abilities. It taught me that good
+          interaction design isn't just about what users see or hear, it’s also
+          about connecting their actions to outcomes. By integrating sound and
+          text in a way the feels natural and experimental, Word Doc Synth
+          demonstrates how ordinary digital behaviors can become meaningful,
+          creative experiences!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
